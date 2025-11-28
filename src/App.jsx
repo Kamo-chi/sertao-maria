@@ -83,27 +83,24 @@ export default function App() {
           </div>
         </section>
 
-        <section id="testimonials" className="bg-gray-50 py-20">
+        <section id="noticias" className="bg-gray-50 py-20">
           <div className="mx-auto px-6 max-w-screen-2xl">
-            <h2 className="text-3xl font-bold mb-6">Testimonials</h2>
+            <h2 className="text-3xl font-bold mb-6">Notícias</h2>
             <p>Depoimentos de clientes podem ser colocados aqui.</p>
           </div>
         </section>
 
-        <section id="pricing" className="py-20">
+        <section id="premiacoes" className="py-20">
           <div className="mx-auto px-6 max-w-screen-2xl">
-            <h2 className="text-3xl font-bold mb-6">Pricing</h2>
+            <h2 className="text-3xl font-bold mb-6">Premiações</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="p-6 border rounded">Plano Básico</div>
-              <div className="p-6 border rounded">Plano Pro</div>
-              <div className="p-6 border rounded">Plano Enterprise</div>
             </div>
           </div>
         </section>
 
-        <section id="contact" className="bg-indigo-600 text-white py-20">
+        <section id="contato" className="bg-indigo-600 text-white py-20">
           <div className="mx-auto px-6 max-w-screen-2xl">
-            <h2 className="text-3xl font-bold mb-4">Contact</h2>
+            <h2 className="text-3xl font-bold mb-4">Contato</h2>
             <form className="max-w-2xl">
               <label className="block mb-2">
                 <span className="text-sm">Nome</span>
