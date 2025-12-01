@@ -2,15 +2,16 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import Carousel from './components/Carousel'
 import AboutUs from './components/AboutUs'
+import Characters from './components/Characters'
 import Contact from './components/Contact'
-import CharactersCarousel from './components/CharactersCarousel'
-import characters from './data/characters'
+
 
 export default function App() {
   return (
     <div className="min-h-screen flex flex-col text-gray-800">
       <Header />
       <main className="flex-grow">
+
         <section id="hero" className="relative bg-gradient-to-r from-sky-500 to-indigo-600 text-white h-96 md:h-[520px]">
           {/* Title centered at top */}
             <h1
@@ -33,12 +34,7 @@ export default function App() {
         </section>
 
         <AboutUs />
-
-        <section id="personagens" className="py-12">
-          <div className="mx-auto px-6 max-w-screen-2xl">
-            <CharactersCarousel cards={characters} />
-          </div>
-        </section>
+        <Characters />
 
         <section id="noticias" className="bg-gray-50 py-20">
           <div className="mx-auto px-6 max-w-screen-2xl">
