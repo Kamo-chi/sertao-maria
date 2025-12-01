@@ -1,5 +1,3 @@
-import react from "react";
-
 export default function News() {
     return (
         <section id="noticias" className="bg-gray-50 py-20">

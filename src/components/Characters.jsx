@@ -1,4 +1,3 @@
-import react from "react";
 import CharactersCarousel from './CharactersCarousel'
 import characters from '../data/characters'
 

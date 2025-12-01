@@ -1,5 +1,3 @@
-import react from "react";
-
 export default function Awards() {
     return (
         <section id="premiacoes" className="py-20">

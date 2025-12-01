@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect, useCallback } from 'react'
+import { useRef, useState, useEffect, useCallback } from 'react'
 
 // default data: 10 cards. You can override by passing a `cards` prop from `App.jsx`.
 const DEFAULT_NUM_CARDS = 10

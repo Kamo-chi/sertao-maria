@@ -1,4 +1,3 @@
-import react from "react";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from './ui/accordion'
 
 export default function AboutUs() {
