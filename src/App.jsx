@@ -3,6 +3,8 @@ import Footer from './components/Footer'
 import Carousel from './components/Carousel'
 import AboutUs from './components/AboutUs'
 import Characters from './components/Characters'
+import News from './components/News'
+import Awards from './components/Awards'
 import Contact from './components/Contact'
 
 
@@ -35,22 +37,8 @@ export default function App() {
 
         <AboutUs />
         <Characters />
-
-        <section id="noticias" className="bg-gray-50 py-20">
-          <div className="mx-auto px-6 max-w-screen-2xl">
-            <h2 className="text-3xl font-bold mb-6">Notícias</h2>
-            <p>Depoimentos de clientes podem ser colocados aqui.</p>
-          </div>
-        </section>
-
-        <section id="premiacoes" className="py-20">
-          <div className="mx-auto px-6 max-w-screen-2xl">
-            <h2 className="text-3xl font-bold mb-6">Premiações</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            </div>
-          </div>
-        </section>
-
+        <News />
+        <Awards />
         <Contact />
 
       </main>
