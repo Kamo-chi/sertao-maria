@@ -1,5 +1,15 @@
 import { useRef, useState, useEffect, useCallback } from 'react'
 
+// CharactersCarousel (Presentational Component)
+// Purpose: Renders a horizontal, step-based carousel for character cards.
+// Responsibilities:
+// - Presentational UI and carousel behavior (measure/translate, autoplay
+//   with ping-pong, keyboard navigation, pause-on-hover/focus).
+// - Gracefully handles missing or broken images by showing a "Sem imagem"
+//   placeholder.
+// This component DOES NOT own the data source — pass a `cards` prop with an
+// array of objects ({ id, name, href, image }). A default set of placeholder
+// characters is used if no `cards` prop is provided.
 // default data: 10 cards. You can override by passing a `cards` prop from `App.jsx`.
 const DEFAULT_NUM_CARDS = 10
 const defaultCharacters = Array.from({ length: DEFAULT_NUM_CARDS }).map((_, i) => ({

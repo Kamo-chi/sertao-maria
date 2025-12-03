@@ -1,3 +1,9 @@
+// Characters (Section Wrapper)
+// Purpose: Section-level wrapper that places the characters carousel on the
+// page and provides it with the application's character data. This file
+// imports the presentational carousel component and passes the `characters`
+// data (from `src/data/characters.js`). Keep layout/data responsibilities
+// here so the carousel component itself remains reusable.
 import CharactersCarousel from './CharactersCarousel'
 import characters from '../data/characters'
 
