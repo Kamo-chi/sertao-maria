@@ -1,13 +1,15 @@
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
+import { Toaster, toast } from "react-hot-toast";
 import { Mail, Instagram, Youtube } from "lucide-react";
 
 export default function Contact() {
   const [form, setForm] = useState({
     name: "",
     email: "",
-    message: ""
+    message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -15,6 +17,7 @@ export default function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
 
     const templateParams = {
       from_name: form.name,
@@ -22,24 +25,31 @@ export default function Contact() {
       message: form.message,
     };
 
-    try {
-      const res = await emailjs.send(
+    const promise = emailjs.send(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         templateParams,
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-      );
+    );
 
-      alert("Mensagem enviada com sucesso!");
-      setForm({ name: "", email: "", message: "" });
-    } catch (err) {
-      console.error(err);
-      alert("Erro ao enviar mensagem");
-    }
+    toast.promise(promise, {
+      loading: "Enviando mensagem...",
+      success: () => {
+        setForm({ name: "", email: "", message: "" });
+        setIsSubmitting(false);
+        return "Mensagem enviada com sucesso!";
+      },
+      error: (err) => {
+        console.error(err);
+        setIsSubmitting(false);
+        return "Ocorreu um erro ao enviar a mensagem.";
+      },
+    });
   };
 
   return (
 <section id="contato" className="bg-indigo-600 text-white py-20">
+  <Toaster position="top-center" />
   <div className="mx-auto px-6 max-w-screen-2xl">
 
     <h2 className="text-3xl font-bold mb-8">Contato</h2>
@@ -85,9 +95,10 @@ export default function Contact() {
 
         <button
           type="submit"
-          className="bg-white text-indigo-700 px-4 py-2 rounded font-semibold"
+          disabled={isSubmitting}
+          className="bg-white text-indigo-700 px-4 py-2 rounded font-semibold disabled:opacity-70 disabled:cursor-not-allowed"
         >
-          Enviar
+          {isSubmitting ? "Enviando..." : "Enviar"}
         </button>
       </form>
 
