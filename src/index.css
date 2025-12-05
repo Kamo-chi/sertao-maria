@@ -20,6 +20,7 @@ body {
 html {
   /* fluid base font-size: grows on large viewports but stays reasonable on small screens */
   font-size: clamp(15px, 1.6vw + 12px, 22px);
+  scroll-behavior: smooth;
 }
 
 /* Prefer keeping words intact where possible; allow normal wrapping but avoid automatic hyphenation */

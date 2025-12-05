@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Header(){
   const [open, setOpen] = useState(false)
@@ -6,17 +7,17 @@ export default function Header(){
   return (
     <header className="bg-white shadow">
       <div className="mx-auto px-6 py-4 flex items-center justify-between relative max-w-screen-2xl">
-        <a href="#" className="text-xl md:text-2xl font-bold whitespace-nowrap">Sertão Maria</a>
+        <Link to="/" className="text-xl md:text-2xl font-bold whitespace-nowrap">Sertão Maria</Link>
 
         {/* Desktop nav */}
         <nav className="hidden md:flex">
           <ul className="flex gap-6 items-center">
             <li><a href="#personagens" className="text-sm md:text-base whitespace-nowrap">Personagens</a></li>
-            <li><a href="#noticias" className="text-sm md:text-base whitespace-nowrap">Notícias</a></li>
-            <li><a href="#parcerias" className="text-sm md:text-base whitespace-nowrap">Parcerias</a></li>
-            <li><a href="#premiacoes" className="text-sm md:text-base whitespace-nowrap">Premiações</a></li>
-            <li><a href="#sobre-nos" className="text-sm md:text-base whitespace-nowrap">Sobre Nós</a></li>
-            <li><a href="#contato" className="text-sm md:text-base whitespace-nowrap">Contato</a></li>
+            <li><Link to="/noticias" className="text-sm md:text-base whitespace-nowrap">Notícias</Link></li>
+            <li><Link to="/parcerias" className="text-sm md:text-base whitespace-nowrap">Parcerias</Link></li>
+            <li><Link to="/premiacoes" className="text-sm md:text-base whitespace-nowrap">Premiações</Link></li>
+            <li><Link to="/sobre" className="text-sm md:text-base whitespace-nowrap">Sobre Nós</Link></li>
+            <li><Link to="/#contato" className="text-sm md:text-base whitespace-nowrap">Contato</Link></li>
           </ul>
         </nav>
 
@@ -46,11 +47,11 @@ export default function Header(){
             <div className="px-4 py-3">
               <ul className="flex flex-col gap-2">
                 <li><a onClick={() => setOpen(false)} href="#personagens" className="block text-sm md:text-base">Personagens</a></li>
-                <li><a onClick={() => setOpen(false)} href="#noticias" className="block text-sm md:text-base">Notícias</a></li>
-                <li><a onClick={() => setOpen(false)} href="#parcerias" className="block text-sm md:text-base">Parcerias</a></li>
-                <li><a onClick={() => setOpen(false)} href="#premiacoes" className="block text-sm md:text-base">Premiações</a></li>
-                <li><a onClick={() => setOpen(false)} href="#sobre-nos" className="block text-sm md:text-base">Sobre Nós</a></li>
-                <li><a onClick={() => setOpen(false)} href="#contato" className="block text-sm md:text-base">Contato</a></li>
+                <li><Link onClick={() => setOpen(false)} to="/noticias" className="block text-sm md:text-base">Notícias</Link></li>
+                <li><Link onClick={() => setOpen(false)} to="/parcerias" className="block text-sm md:text-base">Parcerias</Link></li>
+                <li><Link onClick={() => setOpen(false)} to="/premiacoes" className="block text-sm md:text-base">Premiações</Link></li>
+                <li><Link onClick={() => setOpen(false)} to="/sobre" className="block text-sm md:text-base">Sobre Nós</Link></li>
+                <li><Link onClick={() => setOpen(false)} to="/#contato" className="block text-sm md:text-base">Contato</Link></li>
               </ul>
             </div>
           </div>
