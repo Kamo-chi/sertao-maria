@@ -1,6 +1,6 @@
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
-import { Mail, Phone, Instagram } from "lucide-react";
+import { Mail, Instagram, Youtube } from "lucide-react";
 
 export default function Contact() {
   const [form, setForm] = useState({
@@ -92,29 +92,44 @@ export default function Contact() {
       </form>
 
       {/* --- INFORMAÇÕES DE CONTATO --- */}
-      <div className="space-y-6">
-        <h2 className="text-3xl font-bold mb-8">Fale conosco</h2>
+      {/* empurrar elementos para baixo 20pixels */}
+      <div className="space-y-6  md:pt-7">
 
         <div className="flex items-center gap-3">
-          <Mail size={26} />
-          <a href="mailto:contato@sertaomaria.org" className="hover:underline text-lg">
-            contato@sertaomaria.org
+          <img src="/whatsapp.svg" alt="WhatsApp" className="w-[26px] h-[26px] brightness-0 invert" />
+          <a href="https://wa.me/75998605198" target="_blank" className="hover:underline text-lg">
+            (75) 99860-5198
           </a>
         </div>
 
         <div className="flex items-center gap-3">
-          <Phone size={26} />
-          <a href="https://wa.me/55999999999" target="_blank" className="hover:underline text-lg">
-            (99) 99999-9999
+          <img src="/whatsapp.svg" alt="WhatsApp" className="w-[26px] h-[26px] brightness-0 invert" />
+          <a href="https://wa.me/71988078238" target="_blank" className="hover:underline text-lg">
+            (71) 98807-8238
           </a>
         </div>
 
         <div className="flex items-center gap-3">
           <Instagram size={26} />
-          <a href="https://instagram.com/sertaomaria" target="_blank" className="hover:underline text-lg">
-            @sertaomaria
+          <a href="https://www.instagram.com/sertaomaria.memorial" target="_blank" className="hover:underline text-lg">
+            @sertaomaria.memorial
           </a>
         </div>
+
+        <div className="flex items-center gap-3">
+          <Youtube size={26} />
+          <a href="https://www.youtube.com/@vozesememoriasdosertao-p5t1y" target="_blank" className="hover:underline text-lg">
+            www.youtube.com/@vozesememoriasdosertao-p5t1y
+          </a>
+        </div>
+
+        <div className="flex items-center gap-3">
+          <Mail size={26} />
+          <a href="mailto:vozesememoriasdosertao@sertaovivo.org" className="hover:underline text-lg">
+            vozesememoriasdosertao@sertaovivo.org
+          </a>
+        </div>
+
       </div>
 
     </div>
