@@ -5,9 +5,11 @@ export default function Header(){
   const [open, setOpen] = useState(false)
 
   return (
-    <header className="bg-white shadow">
-      <div className="mx-auto px-6 py-4 flex items-center justify-between relative max-w-screen-2xl">
-        <Link to="/" className="text-xl md:text-2xl font-bold whitespace-nowrap">Sertão Maria</Link>
+    <header className="bg-white shadow py-2">
+      <div className="mx-auto flex items-center justify-between relative max-w-screen-2xl">
+        <Link to="/" className="inline-flex items-center p-0 h-10 md:h-16 flex-none" aria-label="Ir para a página inicial">
+          <img src="/images/Logo_header.svg" alt="Sertão Maria" className="block h-10 md:h-16 w-auto" />
+        </Link>
 
         {/* Desktop nav */}
         <nav className="hidden md:flex">
@@ -24,10 +26,11 @@ export default function Header(){
         {/* Mobile toggle */}
         <div className="md:hidden">
           <button
+            type="button"
             onClick={() => setOpen((s) => !s)}
             aria-expanded={open}
             aria-controls="mobile-menu"
-            className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            className="relative z-50 inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
           >
             <span className="sr-only">Abrir menu</span>
             {/* simple hamburger icon */}
@@ -43,7 +46,7 @@ export default function Header(){
 
         {/* Mobile menu (dropdown) */}
         {open && (
-          <div id="mobile-menu" className="absolute top-full left-0 right-0 bg-white shadow-md md:hidden">
+          <div id="mobile-menu" className="absolute top-full left-0 right-0 bg-white shadow-md md:hidden z-40">
             <div className="px-4 py-3">
               <ul className="flex flex-col gap-2">
                 <li><a onClick={() => setOpen(false)} href="#personagens" className="block text-sm md:text-base">Personagens</a></li>

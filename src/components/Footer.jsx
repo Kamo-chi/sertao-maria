@@ -2,7 +2,7 @@ export default function Footer(){
   return (
     <footer id="contato" className="bg-gray-900 text-gray-200 py-8">
       <div className="container mx-auto px-6 text-center">
-        <p>© {new Date().getFullYear()} — Empresa Exemplo. Todos os direitos reservados.</p>
+        <p>© {new Date().getFullYear()} Sertão Maria - Memorial da Mulher Sertaneja. Todos os direitos reservados.</p>
       </div>
     </footer>
   )
