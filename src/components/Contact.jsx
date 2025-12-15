@@ -96,7 +96,7 @@ export default function Contact({ bgClass = 'bg-indigo-600', textClass = 'text-w
         <button
           type="submit"
           disabled={isSubmitting}
-          className="bg-white text-indigo-700 px-4 py-2 rounded font-semibold disabled:opacity-70 disabled:cursor-not-allowed"
+          className="bg-white text-black-700 px-4 py-2 rounded font-semibold disabled:opacity-70 disabled:cursor-not-allowed"
         >
           {isSubmitting ? "Enviando..." : "Enviar"}
         </button>
@@ -107,14 +107,14 @@ export default function Contact({ bgClass = 'bg-indigo-600', textClass = 'text-w
       <div className="space-y-6  md:pt-7">
 
         <div className="flex items-center gap-3">
-          <img src="/whatsapp.svg" alt="WhatsApp" className="w-[26px] h-[26px] brightness-0 invert" />
+          <img src="/whatsapp.svg" alt="WhatsApp" className="w-[26px] h-[26px] brightness-0" />
           <a href="https://wa.me/75998605198" target="_blank" className="hover:underline text-lg">
             (75) 99860-5198
           </a>
         </div>
 
         <div className="flex items-center gap-3">
-          <img src="/whatsapp.svg" alt="WhatsApp" className="w-[26px] h-[26px] brightness-0 invert" />
+          <img src="/whatsapp.svg" alt="WhatsApp" className="w-[26px] h-[26px] brightness-0" />
           <a href="https://wa.me/71988078238" target="_blank" className="hover:underline text-lg">
             (71) 98807-8238
           </a>
