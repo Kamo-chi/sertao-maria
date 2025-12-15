@@ -1,3 +1,5 @@
+import Members from "../components/Members"
+
 export default function Sobre(){
   return (
     <div className="min-h-screen bg-white">
@@ -18,6 +20,8 @@ export default function Sobre(){
             <p className="text-gray-700">Pequena equipe de produção, curadoria de conteúdo e suporte técnico. Informações de contato e bios podem ser adicionadas aqui.</p>
           </section>
         </div>
+
+        <Members bgClass="bg-gradient-to-r from-[#F5F5F5] to-[#F0E4D1]" />
       </main>
     </div>
   )
