@@ -1,11 +1,19 @@
 export default function Partners({ bgClass = 'bg-white', textClass = '' }) {
   const partners = [
-    '/images/partner1.png',
-    '/images/partner2.png',
-    '/images/partner3.png',
-    '/images/partner4.png',
-    '/images/partner5.png',
-    '/images/partner6.png'
+    '/images/partners/Agentes.svg',
+    '/images/partners/Art Sonora.svg',
+    '/images/partners/Ass. N. S. Aparecida.svg',
+    '/images/partners/Bordando Esperança.svg',
+    '/images/partners/Célia Helena.svg',
+    '/images/partners/Centro Cultural.svg',
+    '/images/partners/Comitês de Cultura.svg',
+    '/images/partners/Fundação Itaú.svg',
+    '/images/partners/Ministério.svg',
+    '/images/partners/OPAS.svg',
+    '/images/partners/SECULT.svg',
+    '/images/partners/Sertão Maria.svg',
+    '/images/partners/Sertão Vivo.svg',
+    '/images/partners/Vozes.svg'
   ];
 
   return (

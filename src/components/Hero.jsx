@@ -2,11 +2,11 @@ import Carousel from './Carousel'
 
 export default function Hero({ bgClass = 'relative bg-gradient-to-r from-sky-500 to-indigo-600 text-white', textClass = 'text-white', heightClass = 'h-96 md:h-[520px]', images = null, interval = 6000 }) {
   const defaultImages = [
-    { src: 'images/Carrosel1.jpg', alt: 'Paisagem 1' },
-    { src: 'images/Carrosel2.jpg', alt: 'Paisagem 2' },
-    { src: 'images/Carrosel3.jpg', alt: 'Paisagem 3' },
-    { src: 'images/Carrosel4.jpg', alt: 'Paisagem 4' },
-    { src: 'images/Carrosel5.jpg', alt: 'Paisagem 5' }
+    { src: 'images/Carousel/Carrosel1.jpg', alt: 'Paisagem 1' },
+    { src: 'images/Carousel/Carrosel2.jpg', alt: 'Paisagem 2' },
+    { src: 'images/Carousel/Carrosel3.jpg', alt: 'Paisagem 3' },
+    { src: 'images/Carousel/Carrosel4.jpg', alt: 'Paisagem 4' },
+    { src: 'images/Carousel/Carrosel5.jpg', alt: 'Paisagem 5' }
   ];
 
   return (
