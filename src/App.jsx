@@ -2,46 +2,28 @@ import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
 import Header from './components/Header'
 import Footer from './components/Footer'
-import Carousel from './components/Carousel'
+import Hero from './components/Hero'
 import AboutUs from './components/AboutUs'
 import Characters from './components/Characters'
 import News from './components/News'
 import Awards from './components/Awards'
+import Partners from './components/Partners'
 import Contact from './components/Contact'
 import Noticias from './pages/Noticias'
-import Parcerias from './pages/Parcerias'
-import Premiacoes from './pages/Premiacoes'
 import Sobre from './pages/Sobre'
 
 
 function HomeSections() {
   return (
     <>
-      <section id="hero" className="relative bg-gradient-to-r from-sky-500 to-indigo-600 text-white h-96 md:h-[520px]">
-        <h1
-          className="absolute top-6 left-1/2 -translate-x-1/2 z-50 font-extrabold text-white pointer-events-none whitespace-nowrap"
-          style={{ fontSize: 'clamp(1.25rem, 4vw, 2.5rem)' }}
-        >
-        </h1>
-        <div className="absolute inset-0">
-          <Carousel
-            images={[
-              { src: 'images/Carrosel1.jpg', alt: 'Paisagem 1' },
-              { src: 'images/Carrosel2.jpg', alt: 'Paisagem 2' },
-              { src: 'images/Carrosel3.jpg', alt: 'Paisagem 3' },
-              { src: 'images/Carrosel4.jpg', alt: 'Paisagem 4' },
-              { src: 'images/Carrosel5.jpg', alt: 'Paisagem 5' },
-            ]}
-            interval={6000}
-          />
-        </div>
-      </section>
+      <Hero />
 
-      <AboutUs />
-      <Characters />
-      <News />
-      <Awards />
-      <Contact />
+      <AboutUs bgClass="bg-gradient-to-r from-[#F5F5F5] to-[#F0E4D1]" />
+      <Characters bgClass="bg-gradient-to-r from-[#FFFFFF] to-[#F5EDE0]" />
+      <News bgClass="bg-gradient-to-r from-[#F5F5F5] to-[#F0E4D1]" />
+      <Awards bgClass="bg-gradient-to-r from-[#FFFFFF] to-[#F5EDE0]" />
+      <Partners bgClass="bg-gradient-to-r from-[#F5F5F5] to-[#F0E4D1]" />
+      <Contact bgClass="bg-gradient-to-r from-[#D7B784] to-[#D7B784]" textClass="text-gray-800" />
     </>
   )
 }
@@ -79,8 +61,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<HomeSections />} />
             <Route path="/noticias" element={<Noticias />} />
-            <Route path="/parcerias" element={<Parcerias />} />
-            <Route path="/premiacoes" element={<Premiacoes />} />
+            
             <Route path="/sobre" element={<Sobre />} />
           </Routes>
         </main>

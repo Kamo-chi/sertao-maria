@@ -7,10 +7,11 @@
 import CharactersCarousel from './CharactersCarousel'
 import characters from '../data/characters'
 
-export default function Characters() {
+export default function Characters({ bgClass = '', textClass = '' }) {
     return (
-        <section id="personagens" className="py-12">
+        <section id="personagens" className={`${bgClass} py-12 ${textClass}`}>
           <div className="mx-auto px-6 max-w-screen-2xl">
+            <h2 className="text-3xl font-bold mb-6">Personagens</h2>
             <CharactersCarousel cards={characters} />
           </div>
         </section>

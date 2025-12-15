@@ -1,8 +1,8 @@
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from './ui/accordion'
 
-export default function AboutUs() {
+export default function AboutUs({ bgClass = 'bg-gray-50', textClass = '' }) {
     return (
-        <section id="sobre-nos" className="bg-gray-50 py-20">
+        <section id="sobre-nos" className={`${bgClass} py-20 ${textClass}`}>
           <div className="mx-auto px-6 max-w-screen-2xl">
             <h2 className="text-3xl font-bold mb-6">Quem Somos</h2>
 

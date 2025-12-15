@@ -3,7 +3,7 @@ import emailjs from "@emailjs/browser";
 import { Toaster, toast } from "react-hot-toast";
 import { Mail, Instagram, Youtube } from "lucide-react";
 
-export default function Contact() {
+export default function Contact({ bgClass = 'bg-indigo-600', textClass = 'text-white' }) {
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -48,7 +48,7 @@ export default function Contact() {
   };
 
   return (
-<section id="contato" className="bg-indigo-600 text-white py-20">
+  <section id="contato" className={`${bgClass} ${textClass} py-20`}>
   <Toaster position="top-center" />
   <div className="mx-auto px-6 max-w-screen-2xl">
 

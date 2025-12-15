@@ -1,0 +1,24 @@
+import Carousel from './Carousel'
+
+export default function Hero({ bgClass = 'relative bg-gradient-to-r from-sky-500 to-indigo-600 text-white', textClass = 'text-white', heightClass = 'h-96 md:h-[520px]', images = null, interval = 6000 }) {
+  const defaultImages = [
+    { src: 'images/Carrosel1.jpg', alt: 'Paisagem 1' },
+    { src: 'images/Carrosel2.jpg', alt: 'Paisagem 2' },
+    { src: 'images/Carrosel3.jpg', alt: 'Paisagem 3' },
+    { src: 'images/Carrosel4.jpg', alt: 'Paisagem 4' },
+    { src: 'images/Carrosel5.jpg', alt: 'Paisagem 5' }
+  ];
+
+  return (
+    <section id="hero" className={`${bgClass} ${heightClass} ${textClass}`}>
+      <h1
+        className="absolute top-6 left-1/2 -translate-x-1/2 z-50 font-extrabold pointer-events-none whitespace-nowrap"
+        style={{ fontSize: 'clamp(1.25rem, 4vw, 2.5rem)' }}
+      >
+      </h1>
+      <div className="absolute inset-0">
+        <Carousel images={images ?? defaultImages} interval={interval} />
+      </div>
+    </section>
+  )
+}

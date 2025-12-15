@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Separator from './ui/Separator'
 import news from '../data/news'
 
-export default function News() {
+export default function News({ bgClass = 'bg-gray-50', textClass = '' }) {
   const [index, setIndex] = useState(0);
 
   // Loop automático
@@ -19,12 +19,14 @@ export default function News() {
   const current = news.length > 0 ? news[index] : null;
 
   return (
-    <section id="noticias" className="bg-gray-50 py-20">
+    <section id="noticias" className={`${bgClass} py-20 ${textClass}`}>
       <div className="mx-auto px-6 max-w-screen-2xl">
         <header className="mb-6">
-          <h2 className="text-3xl md:text-4xl font-extrabold mb-2">Notícias</h2>
+          <h2 className="text-3xl font-bold mb-6">Notícias</h2>
         </header>
 
+          <Separator />
+          
         <div className="mt-2">
 
           <h3 className="text-xl font-semibold mb-2">
