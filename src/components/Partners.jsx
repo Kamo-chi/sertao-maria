@@ -11,7 +11,6 @@ export default function Partners({ bgClass = 'bg-white', textClass = '' }) {
     '/images/partners/Ministério.svg',
     '/images/partners/OPAS.svg',
     '/images/partners/SECULT.svg',
-    '/images/partners/Sertão Maria.svg',
     '/images/partners/Sertão Vivo.svg',
     '/images/partners/Vozes.svg'
   ];
