@@ -21,10 +21,10 @@ export default function Partners({ bgClass = 'bg-white', textClass = '' }) {
         <h2 className="text-3xl font-bold mb-4">Parcerias</h2>
         <p className="text-gray-600 mb-6">Organizações e parceiros que apoiam o projeto.</p>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 items-center">
+        <div className="grid grid-cols-4 gap-6 items-center">
           {partners.map((src, i) => (
-            <div key={i} className="flex items-center justify-center p-4 bg-gray-50 rounded">
-              <img src={src} alt={`Parceiro ${i + 1}`} className="max-h-12 object-contain" />
+            <div key={i} className="flex items-center justify-center p-3 bg-gray-50 rounded h-24 sm:h-28 md:h-32">
+              <img src={src} alt={`Parceiro ${i + 1}`} className="w-11/12 h-11/12 object-cover" />
             </div>
           ))}
         </div>
