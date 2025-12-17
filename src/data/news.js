@@ -3,77 +3,77 @@
 const news = [
   {
     id: 'news-1',
-    sectionSubtitle: 'Resumo breve da notícia ou subtítulo descritivo.',
-    title: 'Título principal da notícia 1',
+    sectionSubtitle: 'Atualização do site e novo material educativo',
+    title: 'Lançamos um módulo de oficinas on-line sobre práticas locais',
     content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.',
-    date: '2025-12-02',
-  },
-  {
-    id: 'news-2',
-    sectionSubtitle: 'Segunda notícia: subtítulo resumido.',
-    title: 'Título da notícia 2',
-    content:
-      'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
-    date: '2025-11-28',
-  },
-  {
-    id: 'news-3',
-    sectionSubtitle: 'Terceira notícia: subtítulo curto.',
-    title: 'Título da notícia 3',
-    content:
-      'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-    date: '2025-11-15',
-  },
-
-  // Novas notícias de exemplo (6)
-  {
-    id: 'news-4',
-    sectionSubtitle: 'Lançamento de capítulo',
-    title: 'Anúncio: novo capítulo publicado',
-    content:
-      'Publicamos um novo capítulo da série com conteúdo exclusivo sobre a tradição local. Confira a leitura completa e compartilhe suas impressões.',
+      'Disponibilizamos um novo módulo de oficinas on-line com vídeo-aulas, guias e recursos para professores e mediadores comunitários. O material foi preparado com parceiros locais e está disponível gratuitamente na seção Recursos do site.',
     date: '2025-12-10',
   },
   {
-    id: 'news-5',
-    sectionSubtitle: 'Evento comunitário',
-    title: 'Feira Cultural reúne artesãos e autores locais',
+    id: 'news-2',
+    sectionSubtitle: 'Relatório de campo e abertura de acervo',
+    title: 'Publicamos resultados da pesquisa de 2025 e digitalizamos arquivos',
     content:
-      'A Feira Cultural contou com a participação de criadores, música ao vivo e uma mostra de livros. A próxima edição já tem data marcada.',
-    date: '2025-12-05',
+      'O relatório anual de pesquisa está disponível para leitura. Incluímos mais de 200 imagens digitalizadas e entrevistas transcritas que enriquecem o acervo público do projeto.',
+    date: '2025-12-02',
   },
   {
-    id: 'news-6',
-    sectionSubtitle: 'Atualização do acervo',
-    title: 'Novos documentos e imagens adicionados ao acervo',
+    id: 'news-3',
+    sectionSubtitle: 'Convocatória aberta',
+    title: 'Chamamos voluntários para catalogação e apoio em eventos',
     content:
-      'Incluímos fotografias históricas e entrevistas ao acervo digital, ampliando as referências sobre o território e sua memória oral.',
-    date: '2025-11-30',
+      'Abrimos vagas de voluntariado com foco em catalogação de material histórico e apoio logístico nas atividades de formação comunitária. Interessados podem se inscrever pelo formulário de contato.',
+    date: '2025-11-28',
   },
+
   {
-    id: 'news-7',
-    sectionSubtitle: 'Entrevista',
-    title: 'Entrevista com a equipe de pesquisa',
+    id: 'news-4',
+    sectionSubtitle: 'Parcerias e financiamento',
+    title: 'Projeto recebe financiamento para oficinas presenciais',
     content:
-      'Nossa equipe falou sobre métodos de campo, desafios e as próximas etapas do trabalho de documentação cultural.',
+      'Obtivemos um apoio financeiro que viabiliza a realização de 12 oficinas presenciais nas comunidades parceiras durante o próximo semestre, com foco em transmissão de saberes e produção local.',
     date: '2025-11-20',
   },
   {
-    id: 'news-8',
-    sectionSubtitle: 'Parcerias',
-    title: 'Parceria firmada com ONG local',
+    id: 'news-5',
+    sectionSubtitle: 'Agenda cultural',
+    title: 'Feira de saberes e lançamento de publicação local',
     content:
-      'Firmamos uma parceria para promover oficinas educativas e garantir acesso aos materiais a comunidades da região.',
-    date: '2025-11-10',
+      'Na próxima semana realizaremos a Feira de Saberes, reunindo artesãos, contadores de história e lançamento de uma publicação com memórias da região. A entrada é gratuita.',
+    date: '2025-11-15',
+  },
+  {
+    id: 'news-6',
+    sectionSubtitle: 'Novos recursos no site',
+    title: 'Galeria temática com registros audiovisuais',
+    content:
+      'Lançamos uma galeria com registros audiovisuais que documentam práticas festivas e rituais locais. O material foi organizado por temática e está acessível com descrição contextual.',
+    date: '2025-11-05',
+  },
+
+  {
+    id: 'news-7',
+    sectionSubtitle: 'Formação',
+    title: 'Curso curta duração para mediadores culturais',
+    content:
+      'Inscrições abertas para um curso de curta duração voltado a mediadores culturais e educadores. O curso aborda metodologias participativas e registro de campo.',
+    date: '2025-10-28',
+  },
+  {
+    id: 'news-8',
+    sectionSubtitle: 'Reconhecimento',
+    title: 'Prêmio local reconhece iniciativas de memória',
+    content:
+      'Fomos indicados para o Prêmio de Iniciativas de Memória 2025 por nossas ações de preservação e acesso público. A cerimônia de premiação será divulgada em breve.',
+    date: '2025-10-10',
   },
   {
     id: 'news-9',
-    sectionSubtitle: 'Voluntariado',
-    title: 'Aberta convocatória para voluntários',
+    sectionSubtitle: 'Relato de impacto',
+    title: 'Comunidades relatam benefícios das oficinas e do acervo',
     content:
-      'Estamos recrutando voluntários para apoio em eventos e catalogação de materiais. Inscrições abertas até o final do mês.',
-    date: '2025-10-25',
+      'Relatos coletados em avaliações mostram que as oficinas e o acesso ao acervo têm fortalecido laços intergeracionais e a transmissão de saberes tradicionais nas comunidades atendidas.',
+    date: '2025-09-30',
   },
 ]
 
