@@ -1,4 +1,0 @@
-// Premiacoes removida — export vazio para compatibilidade.
-export default function Premiacoes(){
-  return null
-}

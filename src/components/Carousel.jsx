@@ -54,7 +54,7 @@ export default function Carousel({ images = [], interval = 5000 }) {
   }
 
   return (
-    <div className="relative w-full h-full overflow-hidden rounded-lg">
+    <div className="relative w-full h-full overflow-hidden">
       {images.map((img, i) => {
         const isActive = i === active
         const isPrev = i === prevActive

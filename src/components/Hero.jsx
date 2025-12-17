@@ -1,6 +1,6 @@
 import Carousel from './Carousel'
 
-export default function Hero({ bgClass = 'relative bg-gradient-to-r from-sky-500 to-indigo-600 text-white', textClass = 'text-white', heightClass = 'h-96 md:h-[520px]', images = null, interval = 6000 }) {
+export default function Hero({ bgClass = 'relative bg-gradient-to-r from-[#F5F5F5] to-[#F0E4D1] text-gray-900', textClass = 'text-gray-900', heightClass = 'h-96 md:h-[520px]', images = null, interval = 6000 }) {
   const defaultImages = [
     { src: 'images/Carousel/Carrosel1.jpg', alt: 'Paisagem 1' },
     { src: 'images/Carousel/Carrosel2.jpg', alt: 'Paisagem 2' },

@@ -3,10 +3,10 @@ import Members from "../components/Members"
 export default function Sobre(){
   return (
     <div className="min-h-screen bg-white">
-      <section className="bg-gradient-to-r from-sky-500 to-indigo-600 text-white py-20">
+      <section className="bg-gradient-to-r from-[#F5F5F5] to-[#F0E4D1] text-gray-900 py-20">
         <div className="mx-auto px-6 max-w-screen-2xl">
           <h1 className="text-3xl md:text-4xl font-extrabold">Sobre Nós</h1>
-          <p className="mt-2 text-gray-100">Conheça a missão, a equipe e a história por trás do Sertão Maria.</p>
+          <p className="mt-2 text-gray-700">Conheça a missão, a equipe e a história por trás do Sertão Maria.</p>
         </div>
       </section>
 
@@ -21,7 +21,7 @@ export default function Sobre(){
           </section>
         </div>
 
-        <Members bgClass="bg-gradient-to-r from-[#F5F5F5] to-[#F0E4D1]" />
+        <Members bgClass="bg-gradient-to-r from-[#F5F5F5] to-[#F0E4D1] mt-6 mb-2" />
       </main>
     </div>
   )
