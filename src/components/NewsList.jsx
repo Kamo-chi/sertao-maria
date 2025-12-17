@@ -1,8 +1,19 @@
+import { useState } from 'react'
 import Separator from './ui/Separator'
 import news from '../data/news'
 
-export default function NewsList({ bgClass = '', textClass = '' }) {
-  const items = news && news.length > 0 ? news.slice(0, 3) : [];
+export default function NewsList({ bgClass = '', textClass = '', perPage = 6 }) {
+  const [page, setPage] = useState(1)
+  const totalPages = Math.max(1, Math.ceil((news?.length || 0) / perPage))
+
+  const start = (page - 1) * perPage
+  const items = news && news.length > 0 ? news.slice(start, start + perPage) : []
+
+  function goTo(p) {
+    const next = Math.min(Math.max(1, p), totalPages)
+    setPage(next)
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
 
   return (
     <section id="noticias-list" className={`${bgClass} ${textClass}`}>
@@ -31,6 +42,45 @@ export default function NewsList({ bgClass = '', textClass = '' }) {
               </div>
             </article>
           ))}
+
+          {/* Pagination controls */}
+          {totalPages > 1 && (
+            <div className="mt-8 flex flex-col items-center">
+              <p className="text-sm text-gray-600 mb-2 text-center">Esta navegação muda apenas a lista de notícias (continua a sequência do array), não a página do site.</p>
+
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={() => goTo(page - 1)}
+                  disabled={page === 1}
+                  className={`px-3 py-1 rounded ${page === 1 ? 'bg-gray-200 text-gray-500' : 'bg-white border'} shadow-sm`}
+                >
+                  Anterior
+                </button>
+
+                {Array.from({ length: totalPages }).map((_, i) => {
+                  const p = i + 1
+                  return (
+                    <button
+                      key={p}
+                      onClick={() => goTo(p)}
+                      aria-current={page === p ? 'page' : undefined}
+                      className={`px-3 py-1 rounded ${page === p ? 'bg-sky-600 text-white' : 'bg-white border text-gray-700'}`}
+                    >
+                      {p}
+                    </button>
+                  )
+                })}
+
+                <button
+                  onClick={() => goTo(page + 1)}
+                  disabled={page === totalPages}
+                  className={`px-3 py-1 rounded ${page === totalPages ? 'bg-gray-200 text-gray-500' : 'bg-white border'} shadow-sm`}
+                >
+                  Próxima
+                </button>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </section>
